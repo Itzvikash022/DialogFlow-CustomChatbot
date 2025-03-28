@@ -1,0 +1,5 @@
+# Ignore service account credentials
+service-account.json
+
+# Ignore environment files
+.env
