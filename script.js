@@ -6,9 +6,9 @@ async function sendMessage() {
 
     // Append user message to chatbox
     document.getElementById("chatbox").innerHTML += `<p class="message user">${userMessage}</p>`;
-
+    // http://127.0.0.1:8000/webhook
     try {
-        const response = await fetch("http://127.0.0.1:8000/webhook", {
+        const response = await fetch("https://dialogflow-customchatbot.onrender.com/webhook", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
