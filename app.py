@@ -18,13 +18,8 @@ app.add_middleware(
     allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
     allow_headers=["*"],  # Allow all headers
 )
-
-with open("D:/Projects/ChatBot/agentx-mhro-a8846cad656d.json", "r") as file:
-    data = json.load(file)
-
-
 # Path to your Google Dialogflow service account JSON key
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "D:/Projects/ChatBot/agentx-mhro-a8846cad656d.json"
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "D:/Projects/agentx-mhro-817d9dedecf9.json"
 
 # Load environment variables from .env
 load_dotenv()
@@ -39,8 +34,6 @@ if creds_json:
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service-account.json"
 
-print("Project ID:", data["project_id"])
-print("Service Account Email:", data["client_email"])
 
 # Your Dialogflow Project ID
 DIALOGFLOW_PROJECT_ID = "agentx-mhro"
